@@ -4,7 +4,7 @@
   "description": "",
   "main": "ejemplo.js",
   "dependencies": {
-    "@types/node": "^17.0.41",
+    "@types/node": "^17.0.45",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "testScript":  "cd Clase01 & tsc testTarea.ts & node testTarea.js"
+    "testScript": "cd Clase01 & tsc testTarea.ts & node testTarea.js"
   },
   "author": "Facundo Mamonde",
   "license": "ISC",
