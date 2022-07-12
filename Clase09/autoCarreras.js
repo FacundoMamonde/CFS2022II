@@ -15,25 +15,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var telefono_1 = require("./telefono");
-var TelefonoConCamara = /** @class */ (function (_super) {
-    __extends(TelefonoConCamara, _super);
-    function TelefonoConCamara() {
-        return _super.call(this) || this;
+exports.AutoCarreras = void 0;
+var auto_1 = require("./auto");
+var AutoCarreras = /** @class */ (function (_super) {
+    __extends(AutoCarreras, _super);
+    function AutoCarreras(us, mar, mod, year, pat) {
+        var _this = _super.call(this, us, mar, mod, year) || this;
+        _this.patrocinador = pat;
+        return _this;
     }
-    TelefonoConCamara.prototype.sacarFoto = function () {
-        if (this.estaPrendido === true) {
-            console.log("Se saco una foto");
-        }
-        else {
-            console.log(this.mensajeApagado);
-        }
+    AutoCarreras.prototype.getPatrocinador = function () {
+        return this.patrocinador;
     };
-    return TelefonoConCamara;
-}(telefono_1.Telefono));
-var telCC = new TelefonoConCamara();
-telCC.sacarFoto();
-telCC.prenderApagar();
-telCC.sacarFoto();
-telCC.prenderApagar();
-telCC.mandarMensaje(2267666666, "Hola, como estas?");
+    AutoCarreras.prototype.setPatrocinador = function (nuevoPatrocinador) {
+        this.patrocinador = nuevoPatrocinador;
+    };
+    return AutoCarreras;
+}(auto_1.Auto));
+exports.AutoCarreras = AutoCarreras;

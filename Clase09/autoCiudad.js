@@ -15,20 +15,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var telefono_1 = require("./telefono");
-var TelefonoConRadio = /** @class */ (function (_super) {
-    __extends(TelefonoConRadio, _super);
-    function TelefonoConRadio(frec) {
-        var _this = _super.call(this) || this;
-        _this.frecuenciaActual = frec;
+exports.AutoCiudad = void 0;
+var auto_1 = require("./auto");
+var AutoCiudad = /** @class */ (function (_super) {
+    __extends(AutoCiudad, _super);
+    function AutoCiudad(us, mar, mod, year, pat) {
+        var _this = _super.call(this, us, mar, mod, year) || this;
+        _this.patente = pat;
         return _this;
     }
-    TelefonoConRadio.prototype.verFrecuenciaActual = function () {
-        console.log(this.frecuenciaActual);
+    AutoCiudad.prototype.getPatente = function () {
+        return this.patente;
     };
-    return TelefonoConRadio;
-}(telefono_1.Telefono));
-var telCR = new TelefonoConRadio(80);
-telCR.prenderApagar();
-telCR.prenderApagar();
-telCR.hacerLlamada(2267666666);
+    AutoCiudad.prototype.cambiarPatente = function (nuevaPatente) {
+        this.patente = nuevaPatente;
+    };
+    return AutoCiudad;
+}(auto_1.Auto));
+exports.AutoCiudad = AutoCiudad;
